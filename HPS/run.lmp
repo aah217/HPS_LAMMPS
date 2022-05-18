@@ -1,0 +1,39 @@
+processors * * *
+units       real
+dimension   3
+boundary    p p p
+atom_style  full
+
+variable d string 0.1
+
+pair_style  hybrid/overlay lj/cut/coul/debye $d 0.0 lj/cut 0.1 lj/cut 0.1 table lookup 1000
+bond_style  harmonic
+dielectric  80.0
+
+variable t world 300
+
+read_data input.data
+
+bond_coeff  1 189 3.81
+
+include HPS_Coeffs.txt
+
+special_bonds fene
+neighbor  3.5 multi
+neigh_modify  every 10 delay 0
+timestep      10.0
+
+velocity all create $t 314159
+
+fix fxlange all langevin $t $t 1000.0 265358
+fix fxstandard all nve
+
+thermo        1000
+thermo_style  custom step pe ke temp 
+thermo_modify flush yes
+dump          1 all xtc 1000 out_$t.xtc
+restart       100000 restart.$t.tmp1 restart.$t.tmp2
+
+run           100000000
+
+write_data out_$t_$d.data
