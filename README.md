@@ -8,8 +8,9 @@ We have implemented the Kim & Hummer [3] Model using similar methods which can b
 
 Table of important parameters where listed type is indentifier used in LAMMPS input files and HPS value is as defined in [1] & [2]:
  
+ 
 name|abc|tla|charge (e)|radius (Å)|hps|type|mass (g/mole)
----|---|---|---|---|---|---
+---|---|---|---|---|---|---|---
 Alanine|A|ALA|0|5.04|0.73|1|71.08
 Cysteine|C|CYS|0|5.48|0.595|2|103.1
 Aspartic Acid|D|ASP|-1|5.58|0.378|3|115.1
