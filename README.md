@@ -7,7 +7,7 @@ Provided python scripts can be used to initialize simulations from pdb files.
 We have implemented the Kim & Hummer [3] Model using similar methods which can be found here: https://github.com/aah217/KH_LAMMPS
 
 Table of important parameters where listed type is indentifier used in LAMMPS input files and HPS value is as defined in [1] & [2]:
-
+ 
 name|abc|tla|charge (e)|radius (Å)|hps|type|mass (g/mole)
 ---|---|---|---|---|---|---
 Alanine|A|ALA|0|5.04|0.73|1|71.08
