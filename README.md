@@ -4,6 +4,8 @@ Instead of writing a custom pair_style, only standard pair_styles are used.
 This method can thus be used quickly and easily on most versions of LAMMPS, which however may lead to reduction of efficiency compared to compiled custom potentials. 
 That stated, the authors have only tested this method on a limited number of LAMMPS versions and can't guarantee it will work with every version.
 Provided python scripts can be used to initialize simulations from pdb files.
+
+The code of this project was used in the simulations in [4], which can be used a reference. 
 We have implemented the Kim & Hummer [3] Model using similar methods which can be found here: https://github.com/aah217/KH_LAMMPS
 
 Table of important parameters where listed type is indentifier used in LAMMPS input files and HPS value is as defined in [1] & [2]:
@@ -38,4 +40,4 @@ Phosphotyrosine|U|TYP|-2|7.38|0.189|23|241.15
 1. G.L. Dignon, W. Zheng, Y.C. Kim, R.B. Best, J. Mittal (2018) Sequence determinants of protein phase behavior from a coarse-grained model. PLOS Computational Biology 14(1): e1005941. https://doi.org/10.1371/journal.pcbi.1005941
 2. T.M. Perdikari, N. Jovic, G. L. Dignon, Y.C. Kim, N.L. Fawzi, J. Mittal (2021) A predictive coarse-grained model for position-specific effects of post-translational modifications. Biophys. J. 120,7 1187-1197. https://doi.org/10.1016/j.bpj.2021.01.034
 3. Y.C. Kim, G. Hummer (2008) Coarse-grained models for simulation of multiprotein complexes: application to ubiquitin binding. J. Mol. Biol. 375,5 1416-1433. https://doi.org/10.1016/j.jmb.2007.11.063
-
+4. R. Bhattacharjee, A. R. Hall, M. C. Mangione, M. G. Igarashi, R. H. Roberts-Galbraith, J. Chen, D. Vavylonis, K. L. Gould (2022) Multiple polarity kinases inhibit phase separation of F-BAR protein Cdc15 and antagonize cytokinetic ring assembly in fission yeast. bioRxiv. https://doi.org/10.1101/2022.08.26.505417
